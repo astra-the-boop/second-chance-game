@@ -162,5 +162,3 @@ while True:
             print("cool")
 
     clear()
-     
-#update this to support keyboard module
