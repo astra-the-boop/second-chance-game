@@ -2,6 +2,7 @@ import datetime
 import time
 import sys
 import keyboard
+import tkinter as tk
 
 def animateText(message, delay = -1):
     for letter in message:
@@ -18,7 +19,19 @@ def animateText(message, delay = -1):
 def clear():
     print("\n"*50)
 
-clear()
+def sketchAnimate(delay, f1, f2, f3, cycle):
+    for i in cycle:
+        time.sleep(delay)
+        print(f1)
+        clear()
+        time.sleep(delay)
+        print(f2)
+        clear()
+        time.sleep(delay)
+        print(f3)
+        clear()
+
+
 print("TITLE")
 optionStart = ""
 try:
@@ -103,9 +116,22 @@ except FileNotFoundError:
     with open('/Users/macbook/Desktop/game/save.txt', 'x') as writeSave:
             writeSave.write('000000:000000:000000:000000')
 
+
+#CHARACTER SELECTION MENU????
+##SHOWS A MIRROR OF A BLACKED OUT FIGURE
+sketchAnimate(0.3,"frame1","frame2","frame3",3)
+##MC HAS AN **IDENTITY CRISIS** :starstruck:
+##"It's me"
+##"Who am I??"
+## use tkinter to set up a pop up thingy asking for name
+
+
+
+
 animateText("(The following sequence is a description of the cutscene, the actual cutscene is still in development)")
 time.sleep(3)
 clear()
+#MC runs through a hallway
 animateText("'No, no... I don't want this, please just let me escape...")
 time.sleep(2)
 clear()
